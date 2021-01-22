@@ -1,2 +1,2 @@
 <app-post-details *ngIf="singlePost" [postWithDetails]="singlePost"></app-post-details>
-<app-post *ngFor="let post of posts" [post]="post" (eventEmitter)="showPostDetails($event)"></app-post>
+<app-post *ngFor="let post of posts" [post]="post" (eventEmitter)="getSinglePost($event)"></app-post>

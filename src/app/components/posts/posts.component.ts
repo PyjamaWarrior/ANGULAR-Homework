@@ -18,7 +18,7 @@ export class PostsComponent implements OnInit {
     this.postService.getAllPosts().subscribe(value => this.posts = value);
   }
 
-  showPostDetails(post: Post): void {
+  getSinglePost(post: Post): void {
     this.singlePost = post;
   }
 }

@@ -7,7 +7,7 @@ import {Post} from '../../models/Post';
   styleUrls: ['./post-details.component.scss']
 })
 export class PostDetailsComponent implements OnInit {
-   @Input() postWithDetails!: Post;
+   @Input() postWithDetails: Post;
 
   constructor() { }
 

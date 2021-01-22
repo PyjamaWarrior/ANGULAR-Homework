@@ -7,7 +7,7 @@ import {Post} from '../../models/Post';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-  @Input() post!: Post;
+  @Input() post: Post;
 
   @Output() eventEmitter = new EventEmitter<Post>();
 

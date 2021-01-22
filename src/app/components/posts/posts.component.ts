@@ -8,8 +8,8 @@ import {Post} from '../../models/Post';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  posts: Post[] = [];
-  singlePost!: Post;
+  posts: Post[];
+  singlePost: Post;
 
   constructor(private postService: PostService) {
   }

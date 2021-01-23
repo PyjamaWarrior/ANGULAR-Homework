@@ -1,0 +1,10 @@
+.cars-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cars-item-wrapper {
+  flex: 0 1 30%;
+}

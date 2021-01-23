@@ -1,0 +1,32 @@
+.cars-item {
+  font-weight: 800;
+  background-color: mediumaquamarine;
+  font-size: 23px;
+  text-transform: uppercase;
+  color: aliceblue;
+  border: 1px solid aliceblue;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 5px;
+  transition: all .2s linear;
+
+  &__link {
+    background-color: aliceblue;
+    color: mediumaquamarine;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 20px;
+    transition: all .2s linear;
+
+    &:hover {
+      color: black;
+      background-color: transparent;
+    }
+
+    &:focus {
+      color: black;
+      background-color: transparent;
+      box-shadow: 0 0 1px 1px black;
+    }
+  }
+}

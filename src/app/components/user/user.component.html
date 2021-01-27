@@ -1,6 +1,6 @@
-<div>
-  {{user.id}}
-  {{user.name}}
-  {{user.username}}
-  <button (click)="goTo()">Show Details</button>
+<div class="users-item">
+  <p>User Id: {{user.id}};</p>
+  <p>Username: {{user.username}};</p>
+  <p>Email: {{user.email}};</p>
+  <button class="users-item__btn" (click)="goTo()">Show Details</button>
 </div>

@@ -17,7 +17,6 @@ export class PostsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.parent?.params.subscribe(value => {
-      console.log(value);
       this.postService.getPostsByUserId(value.id).subscribe(posts => {
         this.posts = posts;
       });

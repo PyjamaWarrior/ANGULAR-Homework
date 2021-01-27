@@ -7,12 +7,12 @@ import {Post} from '../../models/Post';
   providedIn: 'root'
 })
 export class PostService {
-  private URL = 'https://jsonplaceholder.typicode.com/posts';
+  private URL = 'https://jsonplaceholder.typicode.com';
 
   constructor(private httpClient: HttpClient) {
   }
 
   getPostsByUserId(userId: number): Observable<Post[]> {
-    return this.httpClient.get<Post[]>(`${this.URL}?userId=${userId}`);
+    return this.httpClient.get<Post[]>(`${this.URL}/posts?userId=${userId}`);
   }
 }

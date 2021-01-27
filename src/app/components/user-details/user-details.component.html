@@ -1,7 +1,14 @@
-<div>
-  {{user.id}}
-  {{user.name}}
-  <a [routerLink]="['posts']">Show posts</a>
+<div class="user-details">
+  <span>User Id: {{user.id}}; </span>
+  <span>Name: {{user.name}}; </span>
+  <span>Username: {{user.username}}; </span>
+  <span>Email: {{user.email}}; </span>
+  <div>
+    Address -
+    <span>City: {{user.address.city}}; </span>
+    <span>Street: {{user.address.street}}; </span>
+  </div>
+  <a class="user-details__link" [routerLink]="['posts']">Show posts</a>
 </div>
 
 <router-outlet></router-outlet>

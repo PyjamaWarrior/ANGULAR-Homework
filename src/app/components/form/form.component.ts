@@ -31,7 +31,5 @@ export class FormComponent implements OnInit {
       age: +myForm.controls.age.value,
       email: myForm.controls.email.value
     });
-    console.log(this.users);
-    console.log(myForm);
   }
 }

@@ -2,27 +2,32 @@
   <div>
     <input
       [class.error]="myForm.controls.name.errors"
-      [formControl]="name" type="text" placeholder="Enter your name"
+      [formControl]="name" type="text" placeholder="Enter user name"
     >
-    <span class="msg" *ngIf="myForm.controls.name.errors?.required">Name is required.</span>
+    <div class="msg" *ngIf="myForm.controls.name.errors?.required">*Name is required.</div>
   </div>
   <div>
     <input
       [class.error]="myForm.controls.age.errors"
-      [formControl]="age" type="number" placeholder="Enter your age"
+      [formControl]="age" type="number" placeholder="Enter user age"
     >
-    <span class="msg" *ngIf="myForm.controls.age.errors?.required">Age is required.</span>
-    <span class="msg" *ngIf="myForm.controls.age.errors?.min">Age must be higher than 0.</span>
+    <div class="msg" *ngIf="myForm.controls.age.errors?.required">*Age is required.</div>
+    <div class="msg" *ngIf="myForm.controls.age.errors?.min">*Age must be higher than 0.</div>
   </div>
   <div>
     <input
       [class.error]="myForm.controls.email.errors"
-      [formControl]="email" placeholder="Enter your email"
+      [formControl]="email" placeholder="Enter user email"
     >
-    <span class="msg" *ngIf="myForm.controls.email.errors?.required">Email is required.</span>
-    <span class="msg" *ngIf="myForm.controls.email.errors?.email">Email must be a valid email address.</span>
+    <div class="msg" *ngIf="myForm.controls.email.errors?.required">*Email is required.</div>
+    <div class="msg" *ngIf="myForm.controls.email.errors?.email">*Email must be a valid email address.</div>
   </div>
-  <button [disabled]="!myForm.valid">Add user</button>
+  <button class="btn" [disabled]="!myForm.valid">Add user</button>
 </form>
 
-<app-user *ngFor="let user of users" [user]="user"></app-user>
+<div class="item" *ngIf="!users.length">Here will be users</div>
+<div *ngIf="users.length" class="users-list">
+  <div class="users-item-wrapper" *ngFor="let user of users">
+    <app-user [user]="user"></app-user>
+  </div>
+</div>

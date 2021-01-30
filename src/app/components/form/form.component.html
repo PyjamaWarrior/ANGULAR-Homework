@@ -1,0 +1,28 @@
+<form class="form" [formGroup]="myForm" (ngSubmit)="onFormSubmit(myForm)">
+  <div>
+    <input
+      [class.error]="myForm.controls.name.errors"
+      [formControl]="name" type="text" placeholder="Enter your name"
+    >
+    <span class="msg" *ngIf="myForm.controls.name.errors?.required">Name is required.</span>
+  </div>
+  <div>
+    <input
+      [class.error]="myForm.controls.age.errors"
+      [formControl]="age" type="number" placeholder="Enter your age"
+    >
+    <span class="msg" *ngIf="myForm.controls.age.errors?.required">Age is required.</span>
+    <span class="msg" *ngIf="myForm.controls.age.errors?.min">Age must be higher than 0.</span>
+  </div>
+  <div>
+    <input
+      [class.error]="myForm.controls.email.errors"
+      [formControl]="email" placeholder="Enter your email"
+    >
+    <span class="msg" *ngIf="myForm.controls.email.errors?.required">Email is required.</span>
+    <span class="msg" *ngIf="myForm.controls.email.errors?.email">Email must be a valid email address.</span>
+  </div>
+  <button [disabled]="!myForm.valid">Add user</button>
+</form>
+
+<app-user *ngFor="let user of users" [user]="user"></app-user>

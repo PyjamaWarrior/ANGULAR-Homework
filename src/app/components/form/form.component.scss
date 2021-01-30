@@ -1,0 +1,18 @@
+* {
+  margin: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  border: 1px solid red;
+}
